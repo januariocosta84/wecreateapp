@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>produtu</title>
+
+</head>
+<body>
+<!--
+	<ul>
+{% for category in produtu1 %}
+<li>{{ category.kategoria }}</li>
+{% endfor %}
+</ul>
+{{produtu.deskrisaun }}
+</body>-->
+
+
+<table style="width:100%">
+	<tr>
+  <td>Deskrisaun:</td>
+  <td>{{ produtu.deskrisaun}}</td>
+</tr>
+</table>
+<div class="dropdown-menu">
+    <a class="dropdown-item" href="#">{{produtu1.deskrisaun}}</a>
+    <a class="dropdown-item" href="#">Link 2</a>
+    <a class="dropdown-item" href="#">Link 3</a>
+  </div>
+</html>

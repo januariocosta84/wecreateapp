@@ -1,0 +1,38 @@
+{% extends "base/base.html"%}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{%block title%}employer list{%endblock%}</title>
+</head>
+{% block body %}
+<body>
+
+	<form method="get" class="">
+		{{ employer_filter.form.as_p }}
+		<button type="submit" class="btn btn-default"></button>
+	</form>
+
+	<table class="table table-dark" >
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Naran</th>
+			<th>Titulo</th>
+		</tr>
+	</thead>
+	<tbody>
+		{%for employer in employer_filter.qs%}
+		<tr>
+			<td>{{employer.id}}</td>
+			<td>{{employer.naran}}</td>
+			<td>{{employer.titulo}}</td>
+		</tr>
+		 {% endfor %}
+	</tbody>
+
+	</table>
+
+</body>
+{% endblock %}
+</html>

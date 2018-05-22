@@ -1,0 +1,34 @@
+{% extends 'base/base_menu_login.html' %}
+{% block title %}Login{% endblock %}
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="description" content="">
+ <meta name="author" content="">
+{% block body %}
+<body style="margin-top: 100px;">
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-body panel">
+					<h2 align="center">Inventory Login System</h2>
+  					<form method="post" align="center">
+    					{% csrf_token %}
+    					{{ form.as_p }}
+    				<button class="btn btn-primary" type="submit" >Login</button>
+  					</form>
+				</div>
+			</div>
+		</div>
+  	</div>
+</div>
+</body>
+{% endblock %}
+
+
+<h2 align="center">Inventory Login System</h2>
+  		<form method="post" align="center">
+    	{% csrf_token %}
+    	{{ form.as_p }}
+    	<button type="submit" >Submit</button>
+  		</form>

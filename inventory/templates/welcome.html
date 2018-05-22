@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en-us" >
+<head>
+<title>Select user to change | Django site admin</title>
+<link rel="stylesheet" type="text/css" href="/templates/admin/css/base.css" />
+
+  
+  <link rel="stylesheet" type="text/css" href="/templates/admin/css/changelists.css" />
+  
+  
+    <script type="text/javascript" src="/admin/jsi18n/"></script>
+  
+  
+  
+
+
+
+
+<script type="text/javascript" src="/templates/admin/js/vendor/jquery/jquery.js"></script>
+<script type="text/javascript" src="/templates/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/templates/admin/js/core.js"></script>
+<script type="text/javascript" src="/templates/admin/js/admin/RelatedObjectLookups.js"></script>
+<script type="text/javascript" src="/templates/admin/js/actions.js"></script>
+<script type="text/javascript" src="/templates/admin/js/urlify.js"></script>
+<script type="text/javascript" src="/templates/admin/js/prepopulate.js"></script>
+<script type="text/javascript" src="/templates/admin/js/vendor/xregexp/xregexp.js"></script>
+
+
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/templates/admin/css/responsive.css" />
+    
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+</head>
+
+
+<body class=" app-auth model-user change-list"
+  data-admin-utc-offset="0">
+
+<!-- Container -->
+<div id="container">
+
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name"><a href="/admin/">Django administration</a></h1>
+
+        </div>
+        
+        
+        <div id="user-tools">
+            
+                Welcome,
+                <strong>jcosta</strong>.
+            
+            
+                
+                    <a href="/">View site</a> /
+                
+                
+                    
+                    
+                
+                
+                <a href="/admin/password_change/">Change password</a> /
+                
+                <a href="/admin/logout/">Log out</a>
+            
+        </div>
+        
+        
+        
+    </div>
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+<a href="/admin/">Home</a>
+&rsaquo; <a href="/admin/auth/">Authentication and Authorization</a>
+&rsaquo; Users
+</div>
+
+    
+
+    
+        
+    
+
+    <!-- Content -->
+    <div id="content" class="flex">
+        
+        <h1>Select user to change</h1>
+        
+  <div id="content-main">
+    
+        <ul class="object-tools">
+          
+            
+            <li>
+              
+              <a href="/admin/auth/user/add/" class="addlink">
+                Add user
+              </a>
+            </li>
+            
+          
+        </ul>
+    
+    
+    <div class="module filtered" id="changelist">
+      
+
+<div id="toolbar"><form id="changelist-search" method="get">
+<div><!-- DIV needed for valid HTML -->
+<label for="searchbar"><img src="/templates/admin/img/search.svg" alt="Search" /></label>
+<input type="text" size="40" name="q" value="" id="searchbar" autofocus />
+<input type="submit" value="Search" />
+
+
+</div>
+</form></div>
+
+
+      
+
+
+      
+        
+          <div id="changelist-filter">
+            <h2>Filter</h2>
+            
+<h3> By staff status </h3>
+<ul>
+
+    <li class="selected">
+    <a href="?" title="All">All</a></li>
+
+    <li>
+    <a href="?is_staff__exact=1" title="Yes">Yes</a></li>
+
+    <li>
+    <a href="?is_staff__exact=0" title="No">No</a></li>
+
+</ul>
+
+<h3> By superuser status </h3>
+<ul>
+
+    <li class="selected">
+    <a href="?" title="All">All</a></li>
+
+    <li>
+    <a href="?is_superuser__exact=1" title="Yes">Yes</a></li>
+
+    <li>
+    <a href="?is_superuser__exact=0" title="No">No</a></li>
+
+</ul>
+
+<h3> By active </h3>
+<ul>
+
+    <li class="selected">
+    <a href="?" title="All">All</a></li>
+
+    <li>
+    <a href="?is_active__exact=1" title="Yes">Yes</a></li>
+
+    <li>
+    <a href="?is_active__exact=0" title="No">No</a></li>
+
+</ul>
+
+          </div>
+        
+      
+
+      <form id="changelist-form" method="post" novalidate><input type='hidden' name='csrfmiddlewaretoken' value='qaRrqW00kx5Z3r0DbXgrx7kdkWLbR5ZQERVFbDIBZyxMGPclUyAKHPxL87NzZ8ys' />
+      
+
+      
+          
+<div class="actions">
+    <label>Action: <select name="action" required>
+  <option value="" selected>---------</option>
+
+  <option value="delete_selected">Delete selected users</option>
+
+</select></label><input type="hidden" name="select_across" value="0" class="select-across" />
+    <button type="submit" class="button" title="Run the selected action" name="index" value="0">Go</button>
+    
+        <span class="action-counter" data-actions-icnt="2">0 of 2 selected</span>
+        
+    
+</div>
+
+          
+
+
+<div class="results">
+<table id="result_list">
+<thead>
+<tr>
+
+<th scope="col"  class="action-checkbox-column">
+   
+   <div class="text"><span><input type="checkbox" id="action-toggle" /></span></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-username sorted ascending">
+   
+     
+       <div class="sortoptions">
+         <a class="sortremove" href="?o=" title="Remove from sorting"></a>
+         
+         <a href="?o=-1" class="toggle ascending" title="Toggle sorting"></a>
+       </div>
+     
+   
+   <div class="text"><a href="?o=-1">Username</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-email">
+   
+     
+   
+   <div class="text"><a href="?o=2.1">Email address</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-first_name">
+   
+     
+   
+   <div class="text"><a href="?o=3.1">First name</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-last_name">
+   
+     
+   
+   <div class="text"><a href="?o=4.1">Last name</a></div>
+   <div class="clear"></div>
+</th>
+<th scope="col"  class="sortable column-is_staff">
+   
+     
+   
+   <div class="text"><a href="?o=5.1">Staff status</a></div>
+   <div class="clear"></div>
+</th>
+</tr>
+</thead>
+<tbody>
+
+
+<tr class="row1"><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="1" class="action-select" /></td><th class="field-username"><a href="/admin/auth/user/1/change/">januario</a></th><td class="field-email">&nbsp;</td><td class="field-first_name">&nbsp;</td><td class="field-last_name">&nbsp;</td><td class="field-is_staff"><img src="/templates/admin/img/icon-yes.svg" alt="True" /></td></tr>
+
+
+<tr class="row2"><td class="action-checkbox"><input type="checkbox" name="_selected_action" value="2" class="action-select" /></td><th class="field-username"><a href="/admin/auth/user/2/change/">jcosta</a></th><td class="field-email">jcosta@sgp.tl</td><td class="field-first_name">&nbsp;</td><td class="field-last_name">&nbsp;</td><td class="field-is_staff"><img src="/templates/admin/img/icon-yes.svg" alt="True" /></td></tr>
+
+</tbody>
+</table>
+</div>
+
+
+          
+      
+      
+
+<p class="paginator">
+
+2 users
+
+
+</p>
+
+      </form>
+    </div>
+  </div>
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    <div id="footer"></div>
+</div>
+<!-- END Container -->
+
+</body>
+</html>
