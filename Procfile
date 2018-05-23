@@ -1,2 +1,2 @@
-web: gunicorn wecreateapps.wsgi --log-file -
+web: gunicorn trackingsystem.wsgi --log-file -
 
