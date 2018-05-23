@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import url,path
+from django.urls import url
 from .import views
 from django.contrib.auth import views as auth_views
 
