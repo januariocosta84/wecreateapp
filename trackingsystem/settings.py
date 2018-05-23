@@ -114,10 +114,22 @@ WSGI_APPLICATION = 'trackingsystem.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}"""
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd2rd9q32p5q0a6',
+        'USER':'bojrrzswumqgyl',
+        'PASSWORD':'331dbb37e7c832f306b91b0639b2ae9130a4b5821ef4063f75f4e771b7e8254a',
+        'HOST':'ec2-50-19-232-205.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
 }
 
