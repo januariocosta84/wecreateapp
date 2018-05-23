@@ -171,7 +171,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-#STATIC_PATH=os.path.join(PROJECT_PATH,'static')
+STATIC_PATH=os.path.join(PROJECT_PATH,'static')
 
 STATIC_URL = '/templates/'
 
