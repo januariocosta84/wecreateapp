@@ -1,1 +1,2 @@
-web:gunicorn inventory.wsgi --log-file -
+web: gunicorn wecreateapps.wsgi --log-file -
+
