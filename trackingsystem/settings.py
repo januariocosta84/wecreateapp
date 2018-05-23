@@ -11,13 +11,14 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import django_heroku
+
 
 SETTINGS_DIR = os.path.dirname(__file__)
 PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
 PROJECT_PATH = os.path.abspath(PROJECT_PATH)
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 STATIC_PATH=os.path.join(PROJECT_PATH,'static')
-
 
 
 #DATABASE_PATH = os.path.join(PROJECT_PATH, 'rango.db')
@@ -58,8 +59,8 @@ SECRET_KEY = ')m_i%z#6ia!zo8c7^t7or6e6h0632ss_4jk@m62l@r-kp$9h)*'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['192.168.0.2','192.168.43.221', 'localhost', '127.0.0.1']
-
+#ALLOWED_HOSTS = ['192.168.0.2','192.168.43.221', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS=['wecreateapps.herokuapp.com']
 
 
 #EMAIL_BACKEND = ['django.core.mail.backends.console.EmailBackend']
@@ -157,6 +158,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/templates/'
 
