@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-import django_heroku
-django_heroku.settings(locals())
 
 
 SETTINGS_DIR = os.path.dirname(__file__)
@@ -173,13 +171,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_PATH=os.path.join(PROJECT_PATH,'static')
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+
+
+#STATIC_PATH=os.path.join(PROJECT_PATH,'static')
+
+#STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = (
     STATIC_PATH,
-
-
-django_heroku.settings(locals())
+)
