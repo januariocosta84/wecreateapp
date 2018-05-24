@@ -95,7 +95,6 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['templates'],
-        'DEBUG':True,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
