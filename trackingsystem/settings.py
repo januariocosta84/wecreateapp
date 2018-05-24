@@ -94,7 +94,8 @@ LOGIN_REDIRECT_URL = 'produto'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
+        'DEBUG':True,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -178,7 +179,7 @@ STATIC_URL = '/static/'
 
 #STATIC_PATH=os.path.join(PROJECT_PATH,'static')
 
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 
 
 #STATICFILES_DIRS = (
