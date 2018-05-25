@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-import psycopg2
+
 
 SETTINGS_DIR = os.path.dirname(__file__)
 PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
@@ -122,7 +122,7 @@ WSGI_APPLICATION = 'trackingsystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'd2rd9q32p5q0a6',
         'USER':'bojrrzswumqgyl',
         'PASSWORD':'331dbb37e7c832f306b91b0639b2ae9130a4b5821ef4063f75f4e771b7e8254a',
