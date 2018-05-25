@@ -38,7 +38,7 @@ TEMPLATE_DIRS = (
 )"""
 
 TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
-
+"""
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -46,7 +46,7 @@ TEMPLATE_DIRS = (
     #'<workspace>/tango_with_django_project/templates/',
     #'<virtualens>/mpswebsite/trackingsystem/inventory/templates/',
     TEMPLATE_PATH,
-)
+)"""
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -89,7 +89,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'trackingsystem.urls'
 LOGIN_REDIRECT_URL = 'produto'
-"""
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -105,7 +105,7 @@ TEMPLATES = [
         },
     },
 ]
-"""
+
 
 WSGI_APPLICATION = 'trackingsystem.wsgi.application'
 
