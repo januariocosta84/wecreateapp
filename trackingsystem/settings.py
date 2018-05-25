@@ -125,9 +125,9 @@ WSGI_APPLICATION = 'trackingsystem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2rd9q32p5q0a6',
-        'USER':'bojrrzswumqgyl',
-        'PASSWORD':'331dbb37e7c832f306b91b0639b2ae9130a4b5821ef4063f75f4e771b7e8254a',
+        'NAME': 'dqforuheuurb7',
+        'USER':'gqzmrrwmcvvflt',
+        'PASSWORD':'4d866550f58e61ef9826fb792260e3aeb855613a624b70fbae1013eb76f71cf1',
         'HOST':'ec2-50-19-232-205.compute-1.amazonaws.com',
         'PORT':'5432',
     }
