@@ -89,7 +89,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'trackingsystem.urls'
 LOGIN_REDIRECT_URL = 'produto'
-
+"""
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -105,6 +105,7 @@ TEMPLATES = [
         },
     },
 ]
+"""
 
 WSGI_APPLICATION = 'trackingsystem.wsgi.application'
 
