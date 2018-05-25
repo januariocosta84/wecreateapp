@@ -1,5 +1,5 @@
 dj-database-url==0.5.0
-Django==2.0.5
+Django
 django-bootstrap3==10.0.1
 django-email-login==0.2.4
 django-filter==1.1.0
