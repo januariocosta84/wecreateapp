@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-import dj_database_url
+#import dj_database_url
 
 
 SETTINGS_DIR = os.path.dirname(__file__)
@@ -56,7 +56,7 @@ TEMPLATE_DIRS = (
 SECRET_KEY = ')m_i%z#6ia!zo8c7^t7or6e6h0632ss_4jk@m62l@r-kp$9h)*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = ['192.168.0.2','192.168.43.221', 'localhost', '127.0.0.1']
 ALLOWED_HOSTS=['wecreateapps.herokuapp.com']
@@ -167,20 +167,23 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+#uncoment bellow code to run cloud server
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
+
+
+
+##############uncoment bellow code to run local media server
 #STATIC_PATH=os.path.join(PROJECT_PATH,'static')
 
 #STATIC_URL = '/static/'
 
 
 #STATICFILES_DIRS = (
-#    STATIC_PATH,
+  #  STATIC_PATH,
 #)
