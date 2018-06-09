@@ -23,8 +23,6 @@ TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 
 #DATABASE_PATH = os.path.join(PROJECT_PATH, 'rango.db')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media') # Absolute path to the media directory
 
 
 
@@ -176,6 +174,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media') # Absolute path to the media directory
+MEDIA_URL = '/media/'
 
 
 ##############uncoment bellow code to run local media server
