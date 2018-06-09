@@ -24,7 +24,7 @@ TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 #DATABASE_PATH = os.path.join(PROJECT_PATH, 'rango.db')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media') # Absolute path to the media directory
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'img') # Absolute path to the media directory
 
 
 
