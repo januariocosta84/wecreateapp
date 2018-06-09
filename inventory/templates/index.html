@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% load static %}
+  {% load staticfiles %}
   <head>
 
     <meta charset="utf-8">
@@ -157,8 +157,8 @@
           </div>
           
           <div class="col-lg-4 col-sm-6">
-            <a class="portfolio-box" href="img/portfolio/fullsize/website_app.jpg">
-              <img class="img-fluid" src="img/portfolio/thumbnails/website_app.jpg" alt="">
+            <a class="portfolio-box" href="{%static 'img/portfolio/fullsize/website_app.jpg' %}">
+              <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/website_app.jpg' %}" alt="">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
