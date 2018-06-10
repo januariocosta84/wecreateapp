@@ -36,7 +36,6 @@ TEMPLATE_DIRS = (
     os.path.join(SETTINGS_PATH, 'templates'),
 )"""
 
-TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 """
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -173,17 +172,21 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    STATICFILES_STORAGE,
+)
+
 
 MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media') # Absolute path to the media directory
 MEDIA_URL = '/media/'
 
 
 ##############uncoment bellow code to run local media server
-#STATIC_PATH=os.path.join(PROJECT_PATH,'static')
+#STATIC_PATH=os.path.join(PROJECT_PATH,'media')
 
 #STATIC_URL = '/static/'
 
 
 #STATICFILES_DIRS = (
-  #  STATIC_PATH,
+ #   STATIC_PATH,
 #)
