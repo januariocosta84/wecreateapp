@@ -56,7 +56,7 @@ SECRET_KEY = ')m_i%z#6ia!zo8c7^t7or6e6h0632ss_4jk@m62l@r-kp$9h)*'
 DEBUG = True
 
 #ALLOWED_HOSTS = ['192.168.0.2','192.168.43.221', 'localhost', '127.0.0.1']
-ALLOWED_HOSTS=['wecreateapps.herokuapp.com']
+ALLOWED_HOSTS=['wecreateapps.herokuapp.com','localhost', '127.0.0.1']
 
 
 #EMAIL_BACKEND = ['django.core.mail.backends.console.EmailBackend']
@@ -182,11 +182,11 @@ MEDIA_URL = '/media/'
 
 
 ##############uncoment bellow code to run local media server
-#STATIC_PATH=os.path.join(PROJECT_PATH,'media')
+STATIC_PATH=os.path.join(PROJECT_PATH,'media')
 
-#STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 
 
-#STATICFILES_DIRS = (
- #   STATIC_PATH,
-#)
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
