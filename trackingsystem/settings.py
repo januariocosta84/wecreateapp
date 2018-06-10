@@ -83,7 +83,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'trackingsystem.urls'
@@ -168,7 +168,7 @@ USE_TZ = True
 #uncoment bellow code to run cloud server
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-
+"""
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
@@ -176,14 +176,14 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     STATICFILES_STORAGE,
 )
-
+"""
 
 MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media') # Absolute path to the media directory
 MEDIA_URL = '/media/'
 
 
 ##############uncoment bellow code to run local media server
-STATIC_PATH=os.path.join(PROJECT_PATH,'media')
+STATIC_PATH=os.path.join(PROJECT_PATH,'static')
 
 STATIC_URL = '/static/'
 
