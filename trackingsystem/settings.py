@@ -177,11 +177,11 @@ STATICFILES_DIRS = (
     STATICFILES_STORAGE,
 )
 
-
+"""
 MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media') # Absolute path to the media directory
 MEDIA_URL = '/media/'
 
-"""
+
 ##############uncoment bellow code to run local media server
 STATIC_PATH=os.path.join(PROJECT_PATH,'static')
 
